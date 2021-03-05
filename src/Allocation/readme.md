@@ -21,22 +21,21 @@ Test set 2
 1 ≤ N ≤ 105.
 Sample
 
-Input
- 	
-Output
+## Input
  
-3
-4 100
-20 90 40 90
-4 50
-30 30 10 10
-3 300
-999 999 999
+- 3
+- 4 100
+- 20 90 40 90
+- 4 50
+- 30 30 10 10
+- 3 300
+- 999 999 999
 
-  
-Case #1: 2
-Case #2: 3
-Case #3: 0
+## Output
+
+- Case #1: 2
+- Case #2: 3
+- Case #3: 0
 
   
 In Sample Case #1, you have a budget of 100 dollars. You can buy the 1st and 3rd houses for 20 + 40 = 60 dollars.
