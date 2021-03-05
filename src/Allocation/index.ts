@@ -13,9 +13,7 @@ const calculateMaxHouses = (numberOfHouses: number, prices: number[], budget: nu
     return max;
 };
 
-console.log(calculateMaxHouses(4, [ 20, 90, 40, 90 ], 100));
-console.log(calculateMaxHouses(4, [ 30, 30, 10, 10 ], 50));
-console.log(calculateMaxHouses(3, [ 999, 999, 999 ], 300));
+
 
 export const maxHouses = async () => {
     const myConsole = readline.createInterface({
@@ -70,3 +68,8 @@ export const maxHouses = async () => {
         process.exit(0);
     });
 };
+
+
+console.log(calculateMaxHouses(4, [ 20, 90, 40, 90 ], 100));
+console.log(calculateMaxHouses(4, [ 30, 30, 10, 10 ], 50));
+console.log(calculateMaxHouses(3, [ 999, 999, 999 ], 300));

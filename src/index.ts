@@ -1,3 +1,3 @@
-import { maxHouses } from "./Allocation";
+import { maxHouses } from "./Allocation/index";
 
 maxHouses();
