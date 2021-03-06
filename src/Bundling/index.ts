@@ -62,9 +62,9 @@ const bundleMe = (numberOfStrings: number, groupSize: number, groups: string[]):
             const second = nextEl[ 0 ];
             if (first === second) {
                 if (old) {
-                    myMap.set(first, [ ...old, el, nextEl ]);
+                    myMap.set(first, [ ...old, nextEl ]);
                 } else {
-                    myMap.set(first, [ el ]);
+                    myMap.set(first, [ el, nextEl ]);
                 }
             }
         }
@@ -72,10 +72,19 @@ const bundleMe = (numberOfStrings: number, groupSize: number, groups: string[]):
 
     console.log(myMap);
 
-    for (const [ key, value ] of myMap.entries()) {
-        const { score } = getScore(value);
-        sum += score;
+    for (const [ _, value ] of myMap.entries()) {
+        const arr = [ ...value ];
+        console.log(arr);
+        while (arr.length > 0) {
+            const temp = arr.splice(0, groupSize);
+            console.log(temp);
+            const { score } = getScore(temp);
+            console.log(score);
+            sum += score;
+        }
     }
+
+    console.log(sum);
 
     return sum;
 };
