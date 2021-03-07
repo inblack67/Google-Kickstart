@@ -91,6 +91,6 @@ const bundleMe = (numberOfStrings: number, groupSize: number, groups: string[]):
 
 console.log(bundleMe(6, 3, [ 'RAINBOW', 'FIREBALL', 'RANK', 'RANDOM', 'FIREWALL', 'FIREFIGHTER' ]));
 
-console.log(bundleMe(2, 2, [ 'KICK', 'KTART', 'K' ]));
+console.log(bundleMe(2, 2, [ 'KICK', 'START' ]));
 
 console.log(bundleMe(8, 2, [ 'G', 'G', 'GO', 'GO', 'GOO', 'GOO', 'GOOO', 'GOOO' ]));

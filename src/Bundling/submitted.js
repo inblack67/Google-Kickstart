@@ -1,5 +1,10 @@
 const fs = require('fs');
 
+const input = fs.readFileSync(0, 'utf-8').trim().split('\n');
+let currentLine = 0;
+const readLine = () => input[currentLine++];
+const tests = readLine();
+
 const calculateScore = (s1, s2) => {
 	let final = '';
 	for (let i = 0; i < s1.length; i++) {
@@ -74,18 +79,17 @@ const bundleMe = (numberOfStrings, groupSize, groups) => {
 	return sum;
 };
 
-const input = fs.readFileSync(0, 'utf-8').trim().split('\n');
-let currentLine = 0;
-const readLine = () => input[currentLine++];
-const tests = readLine();
-
-for (let i = 0; i < +tests; i++) {
-	const [ numberOfStrings, groupSize ] = readLine().split(' ');
-	const groups = [];
-	for (let j = 0; j < +numberOfStrings; j++) {
-		const str = readLine();
-		groups.push(str);
+const main = () => {
+	for (let i = 1; i <= +tests; i++) {
+		const [ numberOfStrings, groupSize ] = readLine().split(' ');
+		const groups = [];
+		for (let j = 0; j < +numberOfStrings; j++) {
+			const str = readLine();
+			groups.push(str);
+		}
+		const res = bundleMe(numberOfStrings, groupSize, groups);
+		console.log('Case #' + i + ': ' + res);
 	}
-	const res = bundleMe(numberOfStrings, groupSize, groups);
-	console.log(`Case #${i + 1}: ${res}`);
-}
+};
+
+main();
